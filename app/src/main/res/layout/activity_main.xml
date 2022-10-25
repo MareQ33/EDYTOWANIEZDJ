@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/hecarim"
+        android:layout_width="377dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:src="@drawable/hecarim"
+        android:layout_gravity="top"/>
+
+    <SeekBar
+        android:id="@+id/seek1"
+        android:layout_width="243dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/etykieta"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom"
+        android:max="255" />
+    <SeekBar
+        android:id="@+id/seek2"
+        android:layout_width="245dp"
+        android:layout_height="45dp"
+        android:max="255"
+        android:layout_below="@+id/seek1"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom"/>
+
+    <SeekBar
+        android:id="@+id/seek3"
+        android:layout_width="245dp"
+        android:layout_height="45dp"
+        android:max="255"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/seek2"
+        android:layout_gravity="bottom"/>
+
+    <TextView
+        android:id="@+id/etykieta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hecarim"
+        android:layout_centerInParent="true"
+        android:text="Marek Mazurczak"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+    <TextView
+        android:id="@+id/przezroczystosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Przezroczystość"
+        android:layout_below="@+id/seek3"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"/>
+
+    <SeekBar
+        android:id="@+id/seek4"
+        android:layout_width="245dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/przezroczystosc"
+        android:layout_centerInParent="true"
+        android:foregroundGravity="bottom"
+        android:max="255"
+        android:progress="100"/>
+    <Button
+        android:onClick="clikx"
+        android:id="@+id/obrotx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seek4"
+        android:layout_centerInParent="true"
+        android:text="OBROT X"/>
+    <Button
+        android:onClick="cliky"
+        android:id="@+id/obroty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OBROT Y"
+        android:layout_below="@id/obrotx"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:onClick="kolorklik"
+        android:id="@+id/kolor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZMIEN KOLOR"
+        android:layout_below="@id/obroty"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
